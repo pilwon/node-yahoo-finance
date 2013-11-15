@@ -25,7 +25,7 @@ yahooFinance.historical({
 
 ## API
 
-#### Historical Data (single symbol)
+### Download Historical Data (single symbol)
 
 ```js
 yahooFinance.historical({
@@ -63,7 +63,7 @@ yahooFinance.historical({
 });
 ```
 
-#### Historical Data (multiple symbols)
+### Download Historical Data (multiple symbols)
 
 ```js
 yahooFinance.historical({
@@ -133,7 +133,7 @@ yahooFinance.historical({
 });
 ```
 
-#### Snapshot Data
+### Download Snapshot Data
 
 ```js
 yahooFinance.snapshot({
@@ -143,12 +143,10 @@ yahooFinance.snapshot({
   ],
   fields: FIELDS  // ex: 'snd1l1yr' or ['s', 'n', 'd1', 'l1', 'y', 'r']
 }, function (err, results) {
-  //...
+  /*
+  ...
+  */
 });
-```
-
-```text
-...
 ```
 
 

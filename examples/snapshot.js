@@ -36,7 +36,7 @@ var SYMBOLS = [
 
 yahooFinance.snapshot({
   symbols: SYMBOLS,
-  fields: ['s', 'n', 'd1', 'l1', 'y', 'r']
+  fields: ['s', 'l1', 'd1', 't1', 'c1', 'o', 'h', 'g']
 }, function (err, data, url, fields) {
   if (err) { throw err; }
 

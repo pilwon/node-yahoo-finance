@@ -127,7 +127,8 @@ yahooFinance.historical({
       ],
       url: 'http://ichart.finance.yahoo.com/table.csv?s=GOOG&a=1&b=1&c=1900&d=11&e=15&f=2013&g=d&ignore=.csv',
       symbol: 'GOOG'
-    }
+    },
+    ...
   ]
   */
 });

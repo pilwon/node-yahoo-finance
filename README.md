@@ -14,8 +14,17 @@
 var yahooFinance = require('yahoo-finance');
 
 yahooFinance.historical({
-  symbol: 'AAPL'
+  symbol: 'AAPL',
+  from: '2012-01-01',
+  to: '2012-12-31'
 }, function (err, quotes, url, symbol) {
+  //...
+}
+
+yahooFinance.snapshot({
+  symbols: ['AAPL', 'GOOG'],
+  fields: ['s', 'n', 'd1', 'l1', 'y', 'r']
+}, function (err, data, url, symbol) {
   //...
 }
 ```
@@ -29,31 +38,33 @@ yahooFinance.historical({
 
 ```js
 yahooFinance.historical({
-  symbol: SYMBOL
+  symbol: SYMBOL,
+  from: START_DATE,
+  to: END_DATE
 }, function (err, quotes, url, symbol) {
   /*
   {
     quotes: [
       {
-        Date: Thu Nov 07 2013 00:00:00 GMT-0500 (EST),
-        Open: 45.1,
-        High: 50.09,
-        Low: 44,
-        Close: 44.9,
-        Volume: 117701700,
-        AdjClose: 44.9,
-        Symbol: 'TWTR'
+        date: Thu Nov 07 2013 00:00:00 GMT-0500 (EST),
+        open: 45.1,
+        high: 50.09,
+        low: 44,
+        close: 44.9,
+        volume: 117701700,
+        adjClose: 44.9,
+        symbol: 'TWTR'
       },
       ...
       {
-        Date: Thu Nov 14 2013 00:00:00 GMT-0500 (EST),
-        Open: 42.34,
-        High: 45.67,
-        Low: 42.24,
-        Close: 44.69,
-        Volume: 11090800,
-        AdjClose: 44.69,
-        Symbol: 'TWTR'
+        date: Thu Nov 14 2013 00:00:00 GMT-0500 (EST),
+        open: 42.34,
+        high: 45.67,
+        low: 42.24,
+        close: 44.69,
+        volume: 11090800,
+        adjClose: 44.69,
+        symbol: 'TWTR'
       }
     ],
     url: 'http://ichart.finance.yahoo.com/table.csv?s=TWTR&a=1&b=1&c=1900&d=11&e=15&f=2013&g=d&ignore=.csv',
@@ -70,32 +81,34 @@ yahooFinance.historical({
   symbols: [
     SYMBOL1,
     SYMBOL2
-  ]
+  ],
+  from: START_DATE,
+  to: END_DATE
 }, function (err, results) {
   /*
   [
     {
       quotes: [
         {
-          Date: Fri Apr 12 1996 00:00:00 GMT-0400 (EDT),
-          Open: 25.25,
-          High: 43,
-          Low: 24.5,
-          Close: 33,
-          Volume: 408720000,
-          AdjClose: 1.38,
-          Symbol: 'YHOO'
+          date: Fri Apr 12 1996 00:00:00 GMT-0400 (EDT),
+          open: 25.25,
+          high: 43,
+          low: 24.5,
+          close: 33,
+          volume: 408720000,
+          adjClose: 1.38,
+          symbol: 'YHOO'
         },
         ...
         {
-          Date: Thu Nov 14 2013 00:00:00 GMT-0500 (EST),
-          Open: 35.07,
-          High: 35.89,
-          Low: 34.76,
-          Close: 35.69,
-          Volume: 21368600,
-          AdjClose: 35.69,
-          Symbol: 'YHOO'
+          date: Thu Nov 14 2013 00:00:00 GMT-0500 (EST),
+          open: 35.07,
+          high: 35.89,
+          low: 34.76,
+          close: 35.69,
+          volume: 21368600,
+          adjClose: 35.69,
+          symbol: 'YHOO'
         }
       ],
       url: 'http://ichart.finance.yahoo.com/table.csv?s=YHOO&a=1&b=1&c=1900&d=11&e=15&f=2013&g=d&ignore=.csv',
@@ -104,25 +117,25 @@ yahooFinance.historical({
     {
       quotes: [
         {
-          Date: Thu Aug 19 2004 00:00:00 GMT-0400 (EDT),
-          Open: 100,
-          High: 104.06,
-          Low: 95.96,
-          Close: 100.34,
-          Volume: 22351900,
-          AdjClose: 100.34,
-          Symbol: 'GOOG'
+          date: Thu Aug 19 2004 00:00:00 GMT-0400 (EDT),
+          open: 100,
+          high: 104.06,
+          low: 95.96,
+          close: 100.34,
+          volume: 22351900,
+          adjClose: 100.34,
+          symbol: 'GOOG'
         },
         ...
         {
-          Date: Thu Nov 14 2013 00:00:00 GMT-0500 (EST),
-          Open: 1033.92,
-          High: 1039.75,
-          Low: 1030.35,
-          Close: 1035.23,
-          Volume: 1166700,
-          AdjClose: 1035.23,
-          Symbol: 'GOOG'
+          date: Thu Nov 14 2013 00:00:00 GMT-0500 (EST),
+          open: 1033.92,
+          high: 1039.75,
+          low: 1030.35,
+          close: 1035.23,
+          volume: 1166700,
+          adjClose: 1035.23,
+          symbol: 'GOOG'
         }
       ],
       url: 'http://ichart.finance.yahoo.com/table.csv?s=GOOG&a=1&b=1&c=1900&d=11&e=15&f=2013&g=d&ignore=.csv',
@@ -142,10 +155,37 @@ yahooFinance.snapshot({
     SYMBOL1,
     SYMBOL2
   ],
-  fields: FIELDS  // ex: 'snd1l1yr' or ['s', 'n', 'd1', 'l1', 'y', 'r']
-}, function (err, results) {
+  fields: FIELDS  // ex: ['s', 'n', 'd1', 'l1', 'y', 'r']
+}, function (err, data, url, fields) {
   /*
-  ...
+  {
+    data:  {
+      AAPL: {
+        symbol: 'AAPL',
+        name: 'Apple Inc.',
+        lastTradeDate: '11/15/2013',
+        lastTradePriceOnly: '524.88',
+        dividendYield: '2.23',
+        peRatio: '13.29'
+      },
+      GOOG: {
+        symbol: 'GOOG',
+        name: 'Google Inc.',
+        lastTradeDate: '11/15/2013',
+        lastTradePriceOnly: '1034.23',
+        dividendYield: 'N/A',
+        peRatio: '28.17'
+      }
+    },
+    url: 'http://download.finance.yahoo.com/d/quotes.csv?s=AAPL%2CGOOG%2CMSFT%2CIBM%2CAMZN%2CORCL%2CINTC%2CQCOM%2CFB%2CCSCO%2CSAP%2CTSM%2CBIDU%2CEMC%2CHPQ%2CTXN%2CERIC%2CASML%2CCAJ%2CYHOO&f=snd1l1yr',
+    fields: [
+      's',
+      'n',
+      'd1',
+      'l1',
+      'y',
+      'r'
+    ]
   */
 });
 ```

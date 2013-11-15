@@ -23,6 +23,8 @@
     "library"
   ],
   "dependencies": {
+    "async": "~0.2.9",
+    "csv": "~0.3.6",
     "lodash": "~2.2.1",
     "moment": "~2.4.0",
     "request": "~2.27.0"

@@ -8,6 +8,63 @@
     $ npm install yahoo-finance
 
 
+## Usage
+
+```js
+var yahooFinance = require('yahoo-finance');
+
+yahooFinance.historical({
+  symbol: 'AAPL'
+}, function (err, quotes, url, symbol) {
+  // ...
+}
+
+yahooFinance.historical({
+  symbols: ['AAPL', 'GOOG', 'YHOO']
+}, function (err, results) {
+  // ...
+}
+
+yahooFinance.snapshot({
+  symbols: ['AAPL', 'GOOG', 'YHOO'],
+  fields: 'snd1l1yr'  // or ['s', 'n', 'd1', 'l1', 'y', 'r']
+}, function (err, results) {
+  // ...
+}
+```
+
+* [See more comprehensive examples here.](https://github.com/pilwon/node-yahoo-finance/tree/master/examples)
+
+
+## API
+
+```js
+.historical({
+  symbol: SYMBOL
+}, function (err, quotes, url, symbol) {
+  //...
+});
+
+.historical({
+  symbols: [
+    SYMBOL1,
+    SYMBOL2
+  ]
+}, function (err, results) {
+  //...
+});
+
+.snapshot({
+  symbols: [
+    SYMBOL1,
+    SYMBOL2
+  ]
+}, function (err, results) {
+  //...
+});
+```
+
+
 ## License
 
 <pre>

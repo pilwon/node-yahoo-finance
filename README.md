@@ -21,14 +21,14 @@ yahooFinance.historical({
   to: '2012-12-31'
 }, function (err, quotes, url, symbol) {
   //...
-}
+});
 
 yahooFinance.snapshot({
   symbols: ['AAPL', 'GOOG'],
   fields: ['s', 'n', 'd1', 'l1', 'y', 'r']
 }, function (err, data, url, symbol) {
   //...
-}
+});
 ```
 
 * [See more comprehensive examples here.](https://github.com/pilwon/node-yahoo-finance/tree/master/examples)

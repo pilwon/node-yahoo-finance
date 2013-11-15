@@ -16,20 +16,7 @@ var yahooFinance = require('yahoo-finance');
 yahooFinance.historical({
   symbol: 'AAPL'
 }, function (err, quotes, url, symbol) {
-  // ...
-}
-
-yahooFinance.historical({
-  symbols: ['AAPL', 'GOOG', 'YHOO']
-}, function (err, results) {
-  // ...
-}
-
-yahooFinance.snapshot({
-  symbols: ['AAPL', 'GOOG', 'YHOO'],
-  fields: 'snd1l1yr'  // or ['s', 'n', 'd1', 'l1', 'y', 'r']
-}, function (err, results) {
-  // ...
+  //...
 }
 ```
 
@@ -38,13 +25,19 @@ yahooFinance.snapshot({
 
 ## API
 
+### Historical Data (single symbol)
+
 ```js
 .historical({
   symbol: SYMBOL
 }, function (err, quotes, url, symbol) {
   //...
 });
+```
 
+### Historical Data (multiple symbols)
+
+```js
 .historical({
   symbols: [
     SYMBOL1,
@@ -53,12 +46,17 @@ yahooFinance.snapshot({
 }, function (err, results) {
   //...
 });
+```
 
+### Snapshot Data
+
+```js
 .snapshot({
   symbols: [
     SYMBOL1,
     SYMBOL2
-  ]
+  ],
+  fields: FIELDS  // ex: 'snd1l1yr' or ['s', 'n', 'd1', 'l1', 'y', 'r']
 }, function (err, results) {
   //...
 });

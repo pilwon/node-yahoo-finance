@@ -13,7 +13,9 @@ var yahooFinance = require('..');
 var SYMBOL = 'AAPL';
 
 yahooFinance.historical({
-  symbol: SYMBOL
+  symbol: SYMBOL,
+  from: '2012-01-01',
+  to: '2012-12-31'
 }, function (err, quotes, url, symbol) {
   if (err) { throw err; }
 

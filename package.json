@@ -27,7 +27,8 @@
     "csv": "~0.3.6",
     "lodash": "~2.2.1",
     "moment": "~2.4.0",
-    "request": "~2.27.0"
+    "request": "~2.27.0",
+    "string": "~1.6.1"
   },
   "devDependencies": {
     "colors": "~0.6.2",

@@ -150,6 +150,11 @@ yahooFinance.snapshot({
 ```
 
 
+## Credits
+
+  See the [contributors](https://github.com/pilwon/node-yahoo-finance/graphs/contributors).
+
+
 ## License
 
 <pre>

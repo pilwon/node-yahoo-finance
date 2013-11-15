@@ -1,6 +1,8 @@
 # yahoo-finance
 
-`yahoo-finance` is [Yahoo Finance](http://finance.yahoo.com/) client library for [Node.js](http://nodejs.org/).
+`yahoo-finance` is [Yahoo Finance](http://finance.yahoo.com/) historical quotes and snapshot data downloader written in [Node.js](http://nodejs.org/).
+
+The library handles fetching, parsing, and cleaning of CSV data and returns JSON result that is convenient and easy to work with.
 
 
 ## Installation

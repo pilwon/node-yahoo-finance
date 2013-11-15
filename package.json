@@ -1,6 +1,6 @@
 {
   "name": "yahoo-finance",
-  "description": "Yahoo Finance client library for Node.js",
+  "description": "Yahoo Finance historical quotes and snapshot data downloader written in Node.js",
   "version": "0.1.0",
   "license": "MIT",
   "author": {

@@ -14,7 +14,7 @@ var _ = require('lodash'),
 var SYMBOLS = [
   'AAPL',
   'AMZN',
-  'GOOG',
+  'GOOGL',
   'YHOO'
 ];
 

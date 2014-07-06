@@ -16,7 +16,7 @@ yahooFinance.historical({
   symbol: SYMBOL,
   from: '2012-01-01',
   to: '2012-12-31',
-  period: 'd'
+  // period: 'd'
 }, function (err, quotes, url, symbol) {
   if (err) { throw err; }
 

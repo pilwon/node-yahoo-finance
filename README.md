@@ -18,15 +18,16 @@ var yahooFinance = require('yahoo-finance');
 yahooFinance.historical({
   symbol: 'AAPL',
   from: '2012-01-01',
-  to: '2012-12-31'
-  period: 'w' // Optional. Possible values: 'd' (daily, default), 'w' (weekly), 'm' (monthly).
+  to: '2012-12-31',
+  // period: 'd'  // 'd' (daily), 'w' (weekly), 'm' (monthly)
 }, function (err, quotes, url, symbol) {
   //...
 });
 
 yahooFinance.snapshot({
   symbols: ['AAPL', 'GOOG'],
-  fields: ['s', 'n', 'd1', 'l1', 'y', 'r']
+  fields: ['s', 'n', 'd1', 'l1', 'y', 'r'],
+  // period: 'd'  // 'd' (daily), 'w' (weekly), 'm' (monthly)
 }, function (err, data, url, symbol) {
   //...
 });

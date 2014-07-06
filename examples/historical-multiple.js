@@ -21,7 +21,8 @@ var SYMBOLS = [
 yahooFinance.historical({
   symbols: SYMBOLS,
   from: '2012-01-01',
-  to: '2012-12-31'
+  to: '2012-12-31',
+  period: 'd'
 }, function (err, results) {
   if (err) { throw err; }
 

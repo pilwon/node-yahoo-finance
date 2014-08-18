@@ -19,7 +19,7 @@ yahooFinance.historical({
   symbol: 'AAPL',
   from: '2012-01-01',
   to: '2012-12-31',
-  // period: 'd'  // 'd' (daily), 'w' (weekly), 'm' (monthly)
+  // period: 'd'  // 'd' (daily), 'w' (weekly), 'm' (monthly), 'v' (dividends only)
 }, function (err, quotes, url, symbol) {
   //...
 });
@@ -27,7 +27,6 @@ yahooFinance.historical({
 yahooFinance.snapshot({
   symbols: ['AAPL', 'GOOG'],
   fields: ['s', 'n', 'd1', 'l1', 'y', 'r'],
-  // period: 'd'  // 'd' (daily), 'w' (weekly), 'm' (monthly)
 }, function (err, data, url, symbol) {
   //...
 });

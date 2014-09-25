@@ -25,9 +25,9 @@ yahooFinance.historical({
 });
 
 yahooFinance.snapshot({
-  symbols: ['AAPL', 'GOOG'],
+  symbol: 'AAPL',
   fields: ['s', 'n', 'd1', 'l1', 'y', 'r'],
-}, function (err, data, url, symbol) {
+}, function (err, snapshot) {
   //...
 });
 ```
@@ -83,7 +83,7 @@ yahooFinance.historical({
 }, function (err, result) {
   /*
   {
-    "YHOO": [
+    YHOO: [
       {
         date: Fri Apr 12 1996 00:00:00 GMT-0400 (EDT),
         open: 25.25,
@@ -106,7 +106,7 @@ yahooFinance.historical({
         symbol: 'YHOO'
       }
     ],
-    "GOOG": [
+    GOOGL: [
       {
         date: Thu Aug 19 2004 00:00:00 GMT-0400 (EDT),
         open: 100,
@@ -115,7 +115,7 @@ yahooFinance.historical({
         close: 100.34,
         volume: 22351900,
         adjClose: 100.34,
-        symbol: 'GOOG'
+        symbol: 'GOOGL'
       },
       ...
       {
@@ -126,7 +126,7 @@ yahooFinance.historical({
         close: 1035.23,
         volume: 1166700,
         adjClose: 1035.23,
-        symbol: 'GOOG'
+        symbol: 'GOOGL'
       }
     ],
     ...
@@ -172,8 +172,8 @@ yahooFinance.snapshot({
       dividendYield: '2.23',
       peRatio: '13.29'
     },
-    GOOG: {
-      symbol: 'GOOG',
+    GOOGL: {
+      symbol: 'GOOGL',
       name: 'Google Inc.',
       lastTradeDate: '11/15/2013',
       lastTradePriceOnly: '1034.23',

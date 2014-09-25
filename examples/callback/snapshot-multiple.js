@@ -3,7 +3,7 @@ var util = require('util');
 require('colors');
 
 var _ = require('lodash');
-var yahooFinance = require('..');
+var yahooFinance = require('../..');
 
 var SYMBOLS = [
   'AAPL',
@@ -31,14 +31,10 @@ var SYMBOLS = [
 yahooFinance.snapshot({
   symbols: SYMBOLS,
   fields: ['s', 'l1', 'd1', 't1', 'c1', 'o', 'h', 'g']
-}, function (err, data, url, fields) {
+}, function (err, result) {
   if (err) { throw err; }
-
-  console.log(util.format('[Fields] %s', fields.join(',')).yellow);
-  console.log(url.yellow);
-
-  _.each(data, function (result, symbol) {
+  _.each(result, function (snapshot, symbol) {
     console.log(util.format('=== %s ===', symbol).cyan);
-    console.log(JSON.stringify(result, null, 2));
+    console.log(JSON.stringify(snapshot, null, 2));
   });
 });

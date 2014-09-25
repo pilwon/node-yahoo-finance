@@ -3,7 +3,7 @@ var util = require('util');
 require('colors');
 
 var _ = require('lodash');
-var yahooFinance = require('..');
+var yahooFinance = require('../..');
 
 var SYMBOLS = [
   'AAPL',
@@ -17,20 +17,17 @@ yahooFinance.historical({
   from: '2012-01-01',
   to: '2012-12-31',
   period: 'd'
-}, function (err, results) {
-  if (err) { throw err; }
-
-  _.each(results, function (result) {
+}).then(function (result) {
+  _.each(result, function (quotes, symbol) {
     console.log(util.format(
       '=== %s (%d) ===',
-      result.symbol,
-      result.quotes.length
+      symbol,
+      quotes.length
     ).cyan);
-    console.log(result.url.yellow);
     console.log(
       '%s\n...\n%s',
-      JSON.stringify(result.quotes[0], null, 2),
-      JSON.stringify(result.quotes[result.quotes.length - 1], null, 2)
+      JSON.stringify(quotes[0], null, 2),
+      JSON.stringify(quotes[quotes.length - 1], null, 2)
     );
   });
 });

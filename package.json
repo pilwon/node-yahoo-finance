@@ -27,7 +27,6 @@
     "library"
   ],
   "dependencies": {
-    "async": "^0.2.10",
     "bluebird": "^2.3.2",
     "csv": "^0.3.7",
     "debug": "^2.0.0",

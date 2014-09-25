@@ -1,31 +1,41 @@
-module.exports = function (grunt) {
-  // load all grunt tasks
-  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+var loadGruntTasks = require('load-grunt-tasks');
 
-  // Project configuration.
+var FILES = [
+  '**/*.js',
+  '!node_modules/**/*'
+];
+
+module.exports = function (grunt) {
+  loadGruntTasks(grunt);
+
   grunt.initConfig({
-    jshint: {  // grunt-contrib-jshint
+    // grunt-concurrent
+    concurrent: {
+      all: {
+        tasks: [
+          'jshint',
+          'watch'
+        ],
+        options: {
+          logConcurrentOutput: true
+        }
+      }
+    },
+    // grunt-contrib-jshint
+    jshint: {
       options: {
         jshintrc: '.jshintrc'
       },
-      all: [
-        '**/*.js',
-        '!node_modules/**/*'
-      ]
+      all: FILES
     },
-    watch: {  // grunt-contrib-watch
+    // grunt-contrib-watch
+    watch: {
       all: {
-        files: [
-          '**/*.js',
-          '!node_modules/**/*'
-        ],
-        tasks: ['default']
+        files: FILES,
+        tasks: ['jshint']
       }
     }
   });
 
-  grunt.registerTask('default', [
-    'jshint',
-    'watch'
-  ]);
+  grunt.registerTask('default', ['concurrent']);
 };

@@ -37,9 +37,10 @@
   "devDependencies": {
     "colors": "^0.6.2",
     "grunt": "^0.4.5",
+    "grunt-concurrent": "^1.0.0",
     "grunt-contrib-jshint": "^0.7.2",
     "grunt-contrib-watch": "^0.5.3",
-    "matchdep": "^0.3.0"
+    "load-grunt-tasks": "^0.6.0"
   },
   "scripts": {
     "prepublish": "npm prune"

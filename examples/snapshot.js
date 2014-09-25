@@ -1,9 +1,3 @@
-/*
- * lib/snapshot.js
- */
-
-'use strict';
-
 var util = require('util');
 
 require('colors');

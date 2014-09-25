@@ -1,7 +1,3 @@
-#
-# .npmignore
-#
-
 /.editorconfig
 /.gitattributes
 /.jshintrc

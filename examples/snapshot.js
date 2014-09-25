@@ -2,8 +2,8 @@ var util = require('util');
 
 require('colors');
 
-var _ = require('lodash'),
-    yahooFinance = require('..');
+var _ = require('lodash');
+var yahooFinance = require('..');
 
 var SYMBOLS = [
   'AAPL',

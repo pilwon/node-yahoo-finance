@@ -48,7 +48,7 @@ var SYMBOLS = [
   'ERIC',
   'ASML',
   'CAJ',
-  'YHOO',
+  'YHOO'
 ];
 
 yahooFinance.snapshot({

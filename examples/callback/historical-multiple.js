@@ -25,10 +25,14 @@ yahooFinance.historical({
       symbol,
       quotes.length
     ).cyan);
-    console.log(
-      '%s\n...\n%s',
-      JSON.stringify(quotes[0], null, 2),
-      JSON.stringify(quotes[quotes.length - 1], null, 2)
-    );
+    if (quotes[0]) {
+      console.log(
+        '%s\n...\n%s',
+        JSON.stringify(quotes[0], null, 2),
+        JSON.stringify(quotes[quotes.length - 1], null, 2)
+      );
+    } else {
+      console.log('N/A');
+    }
   });
 });

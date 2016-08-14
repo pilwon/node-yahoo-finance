@@ -4,6 +4,8 @@
 
 The library handles fetching, parsing, and cleaning of CSV data and returns JSON result that is convenient and easy to work with. Both callback (last parameter) and promises (using [Bluebird](https://github.com/petkaantonov/bluebird)) styles are supported.
 
+Also check out [google-finance](https://github.com/pilwon/node-google-finance).
+
 
 ## Installation
 

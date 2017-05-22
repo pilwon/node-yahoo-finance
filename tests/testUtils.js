@@ -4,7 +4,8 @@ import path from 'path';
 const fixturePath = (...args) => path.join('tests', 'fixtures', ...args);
 
 const fixtures = {
-  historyHtml: fixturePath('history.html'),
+  historyHtml: fixturePath('history.html'),     // crumb: STATIC_CRUMB
+  historyHtml2: fixturePath('history2.html'),   // crumb: sxCZygzUaUK
   historyCsv: fixturePath('history_download_TSLA.csv'),
   quoteJson: fixturePath('quote.json'),
 };

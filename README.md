@@ -1,7 +1,5 @@
 ## PLEASE READ: This library is currently broken due to sudden API change by Yahoo Finance. The fantastic [@gadicc](https://github.com/gadicc) is currently working on supporting the new API. Please follow [PR #37](pilwon/node-yahoo-finance#37).
 
----
-
 # yahoo-finance
 
 `yahoo-finance` is [Yahoo Finance](http://finance.yahoo.com/) historical quotes and snapshot data downloader written in [Node.js](http://nodejs.org/).

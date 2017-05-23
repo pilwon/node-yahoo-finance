@@ -89,6 +89,11 @@ const result = await quote({
     "regularMarketOpen": 315.5,
     "regularMarketDayLow": 310.2,
     "regularMarketDayHigh": 316.5,
+    "dividendRate": 1.56,
+    "dividendYield": 0.023,
+    "exDividendDate": 1494892800,
+    "payoutRatio": 0.66080004,
+    "fiveYearAvgDividendYield": 2.59,
     "beta": 1.15078,
     "trailingPE": -65.177185,
     "forwardPE": -330.6702,
@@ -106,7 +111,9 @@ const result = await quote({
     "fiftyTwoWeekHigh": 327.66,
     "priceToSalesTrailing12Months": 5.972023,
     "fiftyDayAverage": 309.1597,
-    "twoHundredDayAverage": 249.92029
+    "twoHundredDayAverage": 249.92029,
+    "trailingAnnualDividendRate": 1.53,
+    "trailingAnnualDividendYield": 0.022603042
   }
 }
 ```
@@ -189,7 +196,9 @@ const result = await quote({
       "revenueAverage": 2636630000,
       "revenueLow": 2457200000,
       "revenueHigh": 2887970000
-    }
+    },
+    "exDividendDate": 1494892800,
+    "dividendDate": 1496880000
   }
 }
 ```
@@ -469,6 +478,10 @@ const result = await quote({
 {
   "price": {
     "maxAge": 1,
+    "preMarketChangePercent": 7.3050486E-4,
+    "preMarketChange": 0.05000305,
+    "preMarketTime": 1495533970,
+    "preMarketPrice": 68.5,
     "preMarketSource": "FREE_REALTIME",
     "postMarketChangePercent": -0.0014798812,
     "postMarketChange": -0.45999146,
@@ -532,7 +545,8 @@ const result = await quote({
     "trailingEps": -4.769,
     "forwardEps": -0.94,
     "pegRatio": -1.59,
-    "lastSplitFactor": null,
+    "lastSplitFactor": "2/1",
+    "lastSplitDate": 1045526400,
     "52WeekChange": 0.44787717,
     "SandP52WeekChange": 0.15511417
   }

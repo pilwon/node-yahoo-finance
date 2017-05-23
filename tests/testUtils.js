@@ -7,7 +7,7 @@ const fixtures = {
   historyHtml: fixturePath('history.html'),     // crumb: STATIC_CRUMB
   historyHtml2: fixturePath('history2.html'),   // crumb: sxCZygzUaUK
   historyCsv: fixturePath('history_download_TSLA.csv'),
-  quoteJson: fixturePath('quote.json'),
+  quoteJson: fixturePath('quote_MSFT.json'),    // crumb: sxCZygzUaUK
 };
 
 const STATIC_CRUMB = 'zhqGa4p9aDu';

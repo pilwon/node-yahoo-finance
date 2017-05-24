@@ -13,7 +13,7 @@ import proxyquire from 'proxyquire';
 
 import moment from 'moment';
 
-import { assertValidHistoricalResult, assertValidSnapshotResult } from './testUtils';
+import { assertValidHistoricalResult, assertValidSnapshotResult } from '../lib/index.spec.js';
 
 import { historical } from '../lib/index';
 

@@ -3,25 +3,25 @@
 ## Usage:
 
 ```js
-import fetchQuote from 'yahoo-finance/lib/fetchQuote';
+import quote from 'yahoo-finance/lib/quote';
 
 // style 1 (parameters) - returns a promise
-const quote = await fetchQuote('TSLA');  // implies default modules below
-const quote = await fetchQuote('TSLA', ['summaryDetail', 'recommendationTrend']);
+const result = await quote('TSLA');  // implies default modules below
+const result = await quote('TSLA', ['summaryDetail', 'recommendationTrend']);
 
 // style 2 (similar API to historical() and snapshot()) - returns a promise
-const quote = await fetchQuote({
+const result = await quote({
   symbol: 'TSLA',
   modules: ['price', 'summaryDetail']       // optional; default modules.
 });
 
 // Add a callback function as a final argument (with either style) to run
 // your callback with the result, rather than returning a promise.
-fetchQuote('TSLA', function(err, quote) {
+quote('TSLA', function(err, quote) {
   console.log(quote);
 });
 
-quote;
+result;
 {
   price: {
     // output from price module (see below)

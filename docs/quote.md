@@ -3,33 +3,30 @@
 ## Usage:
 
 ```js
-import quote from 'yahoo-finance/lib/quote';
+var yahooFinance = require('yahoo-finance');
 
-// style 1 (parameters) - returns a promise
-const result = await quote('TSLA');  // implies default modules below
-const result = await quote('TSLA', ['summaryDetail', 'recommendationTrend']);
-
-// style 2 (similar API to historical() and snapshot()) - returns a promise
-const result = await quote({
+yahooFinance.quote({
   symbol: 'TSLA',
   modules: ['price', 'summaryDetail']       // optional; default modules.
-});
-
-// Add a callback function as a final argument (with either style) to run
-// your callback with the result, rather than returning a promise.
-quote('TSLA', function(err, quote) {
+}, function(err, quote) {
   console.log(quote);
-});
-
-result;
-{
-  price: {
-    // output from price module (see below)
-  },
-  summaryDetail: {
-    // output from summaryDetail module (see below)
+  {
+    price: {
+      // output from price module (see below)
+    },
+    summaryDetail: {
+      // output from summaryDetail module (see below)
+    }
   }
-}
+});
+```
+
+Without a callback, `quote()` returns a **promise**.  There is also a
+'shortcut' alternative API, as follows (shown using ES7 async-wait syntax).
+
+```js
+const result = await quote('TSLA');  // implies default modules below
+const result = await quote('TSLA', ['summaryDetail', 'recommendationTrend']);
 ```
 
 ## Modules and sample output

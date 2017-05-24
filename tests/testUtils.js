@@ -1,6 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 
+// for nodeify to work with stubbed out functions
+import BluebirdPromise from 'bluebird';
+
 const fixturePath = (...args) => path.join('tests', 'fixtures', ...args);
 
 const fixtures = {
@@ -31,64 +34,22 @@ function getFile(name) {
   return fileCache[name];
 }
 
-function assertValidHistoricalResult(result) {
-  /*
-    [
-      {
-        date: Thu Nov 07 2013 00:00:00 GMT-0500 (EST),
-        open: 45.1,
-        high: 50.09,
-        low: 44,
-        close: 44.9,
-        volume: 117701700,
-        adjClose: 44.9,
-        symbol: 'TWTR'
-      },
-      ...
-      {
-        date: Thu Nov 14 2013 00:00:00 GMT-0500 (EST),
-        open: 42.34,
-        high: 45.67,
-        low: 42.24,
-        close: 44.69,
-        volume: 11090800,
-        adjClose: 44.69,
-        symbol: 'TWTR'
-      }
-    ]
-  */
+const yahooCrumbStub = {
+  async getCrumb() { return STATIC_CRUMB }
+};
 
-  result.should.be.an('array');
-  result.should.have.length.above(0);
-
-  const row = result[0];
-  row.should.include.keys('date', 'open', 'high', 'low', 'close',
-    'volume', 'adjClose', 'symbol');
-  row.should.be.an('object');
-  row.date.should.be.an.instanceOf(Date);
-  row.open.should.be.a('number');
-  row.high.should.be.a('number');
-  row.low.should.be.a('number');
-  row.close.should.be.a('number');
-  row.volume.should.be.a('number');
-  row.adjClose.should.be.a('number');
-  row.symbol.should.be.a('string');
+function utilsDownloadFixture(name) {
+  return {
+    // async download() { return getFile(name); }
+    download: () => BluebirdPromise.resolve(getFile(name))
+  }
 }
 
-function assertValidSnapshotResult(result) {
-  /*
-    {
-      symbol: 'AAPL',
-      name: 'Apple Inc.',
-      lastTradeDate: '11/15/2013',
-      lastTradePriceOnly: '524.88',
-      dividendYield: '2.23',
-      peRatio: '13.29'
-    }
-  */
-  result.should.be.an('object');
-  result.should.include.keys('symbol', 'name');
+function stubbedFor(name) {
+  return {
+    './yahooCrumb': yahooCrumbStub,
+    './utils': utilsDownloadFixture(name)
+  }
 }
 
-export { assertValidHistoricalResult, assertValidSnapshotResult,
-  getFile, STATIC_CRUMB };
+export { getFile, STATIC_CRUMB, utilsDownloadFixture, stubbedFor };

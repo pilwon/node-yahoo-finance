@@ -101,7 +101,7 @@ const result = await quote('TSLA', ['summaryDetail', 'recommendationTrend']);
     "regularMarketDayHigh": 316.5,
     "dividendRate": 1.56,
     "dividendYield": 0.023,
-    "exDividendDate": 1494892800,
+    "exDividendDate": 2017-02-09T00:00:00.000Z,
     "payoutRatio": 0.66080004,
     "fiveYearAvgDividendYield": 2.59,
     "beta": 1.15078,
@@ -207,8 +207,8 @@ const result = await quote('TSLA', ['summaryDetail', 'recommendationTrend']);
       "revenueLow": 2457200000,
       "revenueHigh": 2887970000
     },
-    "exDividendDate": 1494892800,
-    "dividendDate": 1496880000
+    "exDividendDate": 2017-02-09T00:00:00.000Z,
+    "dividendDate": 2017-05-18T00:00:00.000Z
   }
 }
 ```
@@ -219,259 +219,27 @@ const result = await quote('TSLA', ['summaryDetail', 'recommendationTrend']);
 {
   "upgradeDowngradeHistory": {
     "history": [{
-      "epochGradeDate": 1491782400,
+      "epochGradeDate": 2017-01-24T00:00:00.000Z,
       "firm": "Piper Jaffray",
       "toGrade": "Overweight",
       "fromGrade": "Neutral",
       "action": "up"
     }, {
-      "epochGradeDate": 1489017600,
+      "epochGradeDate": 2016-10-27T00:00:00.000Z,
       "firm": "Bernstein",
       "toGrade": "Mkt Perform",
       "fromGrade": "",
       "action": "init"
-    }, {
-      "epochGradeDate": 1488153600,
-      "firm": "Goldman",
-      "toGrade": "Sell",
-      "fromGrade": "Neutral",
-      "action": "down"
-    }, {
-      "epochGradeDate": 1484784000,
-      "firm": "Morgan Stanley",
-      "toGrade": "Overweight",
-      "fromGrade": "Equal-Weight",
-      "action": "up"
-    }, {
-      "epochGradeDate": 1483488000,
-      "firm": "Guggenheim",
-      "toGrade": "Buy",
-      "fromGrade": "",
-      "action": "init"
-    }, {
-      "epochGradeDate": 1475712000,
-      "firm": "Goldman",
-      "toGrade": "Neutral",
-      "fromGrade": "Buy",
-      "action": "down"
-    }, {
-      "epochGradeDate": 1467072000,
-      "firm": "Argus",
-      "toGrade": "Hold",
-      "fromGrade": "Buy",
-      "action": "down"
-    }, {
-      "epochGradeDate": 1466726400,
-      "firm": "Standpoint Research",
-      "toGrade": "Hold",
-      "fromGrade": "Sell",
-      "action": "up"
-    }, {
-      "epochGradeDate": 1466640000,
-      "firm": "Morgan Stanley",
-      "toGrade": "Equal-Weight",
-      "fromGrade": "Overweight",
-      "action": "down"
-    }, {
-      "epochGradeDate": 1466553600,
-      "firm": "Oppenheimer",
-      "toGrade": "Perform",
-      "fromGrade": "Outperform",
-      "action": "down"
-    }, {
-      "epochGradeDate": 1465516800,
-      "firm": "Piper Jaffray",
-      "toGrade": "Neutral",
-      "fromGrade": "",
-      "action": "init"
-    }, {
-      "epochGradeDate": 1464912000,
-      "firm": "Sterne Agee CRT",
-      "toGrade": "Buy",
-      "fromGrade": "",
-      "action": "init"
-    }, {
-      "epochGradeDate": 1463529600,
-      "firm": "Goldman",
-      "toGrade": "Buy",
-      "fromGrade": "Neutral",
-      "action": "up"
-    }, {
-      "epochGradeDate": 1459987200,
-      "firm": "Standpoint Research",
-      "toGrade": "Sell",
-      "fromGrade": "Hold",
-      "action": "down"
-    }, {
-      "epochGradeDate": 1458518400,
-      "firm": "Argus",
-      "toGrade": "Buy",
-      "fromGrade": "Hold",
-      "action": "up"
-    }, {
-      "epochGradeDate": 1457913600,
-      "firm": "Robert W. Baird",
-      "toGrade": "Outperform",
-      "fromGrade": "Neutral",
-      "action": "up"
-    }, {
-      "epochGradeDate": 1444176000,
-      "firm": "Robert W. Baird",
-      "toGrade": "Neutral",
-      "fromGrade": "Outperform",
-      "action": "down"
-    }, {
-      "epochGradeDate": 1444176000,
-      "firm": "RBC Capital Mkts",
-      "toGrade": "Sector Perform",
-      "fromGrade": "",
-      "action": "init"
-    }, {
-      "epochGradeDate": 1441756800,
-      "firm": "Oppenheimer",
-      "toGrade": "Outperform",
-      "fromGrade": "",
-      "action": "init"
-    }, {
-      "epochGradeDate": 1437436800,
-      "firm": "UBS",
-      "toGrade": "Sell",
-      "fromGrade": "Neutral",
-      "action": "down"
-    }, {
-      "epochGradeDate": 1430784000,
-      "firm": "Jefferies",
-      "toGrade": "Buy",
-      "fromGrade": "",
-      "action": "init"
-    }, {
-      "epochGradeDate": 1427414400,
-      "firm": "Argus",
-      "toGrade": "Hold",
-      "fromGrade": "",
-      "action": "init"
-    }, {
-      "epochGradeDate": 1413504000,
-      "firm": "MLV & Co",
-      "toGrade": "Buy",
-      "fromGrade": "",
-      "action": "init"
-    }, {
-      "epochGradeDate": 1412726400,
-      "firm": "Tigress Financial",
-      "toGrade": "Neutral",
-      "fromGrade": "",
-      "action": "init"
-    }, {
-      "epochGradeDate": 1409616000,
-      "firm": "Stifel",
-      "toGrade": "Buy",
-      "fromGrade": "Hold",
-      "action": "up"
-    }, {
-      "epochGradeDate": 1407715200,
-      "firm": "Deutsche Bank",
-      "toGrade": "Buy",
-      "fromGrade": "Hold",
-      "action": "up"
-    }, {
-      "epochGradeDate": 1395792000,
-      "firm": "UBS",
-      "toGrade": "Neutral",
-      "fromGrade": "",
-      "action": "init"
-    }, {
-      "epochGradeDate": 1392854400,
-      "firm": "Deutsche Bank",
-      "toGrade": "Hold",
-      "fromGrade": "Buy",
-      "action": "down"
-    }, {
-      "epochGradeDate": 1392768000,
-      "firm": "FBR Capital",
-      "toGrade": "Mkt Perform",
-      "fromGrade": "",
-      "action": "init"
-    }, {
-      "epochGradeDate": 1383782400,
-      "firm": "Standpoint Research",
-      "toGrade": "Hold",
-      "fromGrade": "Sell",
-      "action": "up"
-    }, {
-      "epochGradeDate": 1380672000,
-      "firm": "Robert W. Baird",
-      "toGrade": "Neutral",
-      "fromGrade": "Outperform",
-      "action": "down"
-    }, {
-      "epochGradeDate": 1377129600,
-      "firm": "Stifel",
-      "toGrade": "Hold",
-      "fromGrade": "",
-      "action": "init"
-    }, {
-      "epochGradeDate": 1375920000,
-      "firm": "Barclays",
-      "toGrade": "Equal Weight",
-      "fromGrade": "Overweight",
-      "action": "down"
-    }, {
-      "epochGradeDate": 1374796800,
-      "firm": "Deutsche Bank",
-      "toGrade": "Buy",
-      "fromGrade": "Hold",
-      "action": "up"
-    }, {
-      "epochGradeDate": 1362096000,
-      "firm": "Northland Capital",
-      "toGrade": "Outperform",
-      "fromGrade": "",
-      "action": "init"
-    }, {
-      "epochGradeDate": 1342569600,
-      "firm": "Wunderlich",
-      "toGrade": "Sell",
-      "fromGrade": "Buy",
-      "action": "down"
-    }, {
-      "epochGradeDate": 1337644800,
-      "firm": "Maxim Group",
-      "toGrade": "Buy",
-      "fromGrade": "",
-      "action": "init"
-    }, {
-      "epochGradeDate": 1332720000,
-      "firm": "Wunderlich",
-      "toGrade": "Buy",
-      "fromGrade": "Hold",
-      "action": "up"
-    }, {
-      "epochGradeDate": 1326758400,
-      "firm": "Wunderlich",
-      "toGrade": "Buy",
-      "fromGrade": "Hold",
-      "action": "up"
-    }, {
-      "epochGradeDate": 1321920000,
-      "firm": "Wunderlich",
-      "toGrade": "Hold",
-      "fromGrade": "",
-      "action": "init"
-    }, {
-      "epochGradeDate": 1320969600,
-      "firm": "Barclays Capital",
-      "toGrade": "Overweight",
-      "fromGrade": "",
-      "action": "init"
-    }, {
-      "epochGradeDate": 1284595200,
+    },
+    // ...
+    {
+      "epochGradeDate": 2007-01-18T00:00:00.000Z,
       "firm": "Dougherty & Company",
       "toGrade": "Buy",
       "fromGrade": "",
       "action": "init"
     }, {
-      "epochGradeDate": 1281312000,
+      "epochGradeDate": 2007-01-18T00:00:00.000Z,
       "firm": "Deutsche Bank",
       "toGrade": "Hold",
       "fromGrade": "",
@@ -490,17 +258,17 @@ const result = await quote('TSLA', ['summaryDetail', 'recommendationTrend']);
     "maxAge": 1,
     "preMarketChangePercent": 7.3050486E-4,
     "preMarketChange": 0.05000305,
-    "preMarketTime": 1495533970,
+    "preMarketTime": 2017-05-24T13:29:46.000Z,
     "preMarketPrice": 68.5,
     "preMarketSource": "FREE_REALTIME",
     "postMarketChangePercent": -0.0014798812,
     "postMarketChange": -0.45999146,
-    "postMarketTime": 1495238377,
+    "postMarketTime": 2017-05-23T23:59:01.000Z,
     "postMarketPrice": 310.37,
     "postMarketSource": "FREE_REALTIME",
     "regularMarketChangePercent": -0.0071232705,
     "regularMarketChange": -2.230011,
-    "regularMarketTime": 1495224000,
+    "regularMarketTime": 2017-05-24T15:20:15.000Z,
     "priceHint": 2,
     "regularMarketPrice": 310.83,
     "regularMarketDayHigh": 316.5,
@@ -548,15 +316,15 @@ const result = await quote('TSLA', ['summaryDetail', 'recommendationTrend']);
     "priceToBook": 10.103692,
     "fundFamily": null,
     "legalType": null,
-    "lastFiscalYearEnd": 1483142400,
-    "nextFiscalYearEnd": 1546214400,
-    "mostRecentQuarter": 1490918400,
+    "lastFiscalYearEnd": 2016-09-24T00:00:00.000Z,
+    "nextFiscalYearEnd": 2018-09-24T00:00:00.000Z,
+    "mostRecentQuarter": 2017-04-01T00:00:00.000Z,
     "netIncomeToCommon": -722924032,
     "trailingEps": -4.769,
     "forwardEps": -0.94,
     "pegRatio": -1.59,
     "lastSplitFactor": "2/1",
-    "lastSplitDate": 1045526400,
+    "lastSplitDate": 2014-06-09T00:00:00.000Z,
     "52WeekChange": 0.44787717,
     "SandP52WeekChange": 0.15511417
   }

@@ -1,6 +1,13 @@
 # snapshot
 
-## Quick Start:
+## Important Notice
+
+**`snapshot()` has been deprecated**.  Yahoo no longer provides all the info
+required for it to function properly.  Use [quote()](./quote.md) instead.
+
+*The documentation below is for reference purposes only.*
+
+### Quick Start:
 
 ```js
 yahooFinance.snapshot({

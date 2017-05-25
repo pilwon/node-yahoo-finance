@@ -190,7 +190,7 @@ yahooFinance.quote({
 
   See the [contributors](https://github.com/pilwon/node-yahoo-finance/graphs/contributors).
 
-* Special thanks to [@gadicc](https://github.com/gadicc) who brought the broken library back to life when Yahoo suddently changed their API.
+* Special thanks to [@gadicc](https://github.com/gadicc) who brought the broken library back to life when Yahoo suddently changed their API. (check out his hero work at [PR #37](https://github.com/pilwon/node-yahoo-finance/pull/37) and [PR #41](https://github.com/pilwon/node-yahoo-finance/pull/41))
 
 
 ## License

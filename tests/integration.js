@@ -9,13 +9,14 @@ import path from 'path';
 
 import chai from 'chai';
 import chaiAsPromised from 'chai-as-promised';
-import proxyquire from 'proxyquire';
 
 import moment from 'moment';
 
-import { assertValidHistoricalResult, assertValidSnapshotResult } from '../lib/index.spec.js';
+import { assertValidHistoricalResult } from '../lib/historical.spec.js';
+import { assertValidSnapshotResult } from '../lib/snapshot.spec.js';
 
-import { historical } from '../lib/index';
+import historical from '../lib/historical';
+import snapshot from '../lib/snapshot';
 
 const should = chai.should();
 chai.use(chaiAsPromised);
@@ -32,6 +33,23 @@ describe('integration tests', () => {
     it('works', async () => {
       const result = await historical({ symbol: 'TSLA', from: lastWeekStr });
       assertValidHistoricalResult(result);
+    }).timeout(NETWORK_TIMEOUT);
+
+  });
+
+  describe('snapshot', () => {
+
+    it('works with a single symbol', async () => {
+      const result = await snapshot({ symbol: 'MSFT', fields: [ 's', 'y' ] });
+      assertValidSnapshotResult(result);
+    }).timeout(NETWORK_TIMEOUT);
+
+    it('works with multiple symbols', async () => {
+      const result = await snapshot({ symbols: ['MSFT', 'GOOGL'], fields: [ 's', 'p' ] });
+      result.should.be.an('object');
+      result.should.include.keys('GOOGL', 'MSFT');
+      assertValidSnapshotResult(result.GOOGL);
+      assertValidSnapshotResult(result.MSFT);
     }).timeout(NETWORK_TIMEOUT);
 
   });

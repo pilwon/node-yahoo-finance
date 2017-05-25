@@ -1,4 +1,4 @@
-## PLEASE READ: This library is currently broken due to sudden API change by Yahoo Finance. The fantastic [@gadicc](https://github.com/gadicc) is currently working on a fix to support the new API. Please follow [PR #37](https://github.com/pilwon/node-yahoo-finance/pull/37) for the progress.
+## PLEASE READ: This library is partially broken due to sudden API change by Yahoo Finance. The fantastic [@gadicc](https://github.com/gadicc) is currently working on a fix to support the new API. Please follow [PR #41](https://github.com/pilwon/node-yahoo-finance/pull/41) for the progress.
 
 # yahoo-finance
 
@@ -9,13 +9,13 @@ The library handles fetching, parsing, and cleaning of CSV data and returns JSON
 Also check out [google-finance](https://github.com/pilwon/node-google-finance).
 
 
-## NB: Yahoo API
+## Important: New Yahoo API
 
-Yahoo's API has completely changed recently.  This interim release is intended to get you up and running again quickly, but we're still working on it.  Note also that Yahoo have stopped supporting their API for developers, so no guarantees can be made about service availability.  This package relies entirely on open source contributions.  Regarding this package's API:
+Yahoo completely replaced their API on 2017-05-16.  This interim release is intended to get you up and running again quickly, but we're still working on it.  Note also that Yahoo stopped supporting their API for developers some time ago, so no guarantees can be made about service availability, but probably this package will keep working thanks to the magic of open-source.  Regarding the package API:
 
 * `historical()` - should work as expected - please check the output and report any inconsistencies.
 
-* `snapshot()` - disabled in this release.  It will be enabled again in the next release with a compatibility layer for SOME options.  Since Yahoo's new API does not contain all the same data as the old version, 100% compatibility is impossible.  As such, snapshot() is DEPRECATED and we suggest you switch to the new `quote()` API.  However, the upcoming release should provide an easier upgrade for the most common use cases.
+* `snapshot()` - deprecated - returns the original format for SOME old options via a mapping layer.  Since Yahoo's new API does not contain all the same data as the old version, 100% compatibility is impossible - but for the most common options, this should ease upgrade pains.  When you can, transition to the new `quote()` API instead.
 
 * `quote()` - NEW API more faithful to Yahoo's new API.  See below.  This replaces `snapshot()` and we suggest you use it instead.
 
@@ -190,13 +190,15 @@ yahooFinance.quote({
 
   See the [contributors](https://github.com/pilwon/node-yahoo-finance/graphs/contributors).
 
+* Special thanks to [@gadicc](https://github.com/gadicc) who brought the broken library back to life when Yahoo suddently changed their API. (check out his hero work at [PR #37](https://github.com/pilwon/node-yahoo-finance/pull/37) and [PR #41](https://github.com/pilwon/node-yahoo-finance/pull/41))
+
 
 ## License
 
 <pre>
 The MIT License (MIT)
 
-Copyright (c) 2013-2016 Pilwon Huh
+Copyright (c) 2013-2017 Pilwon Huh
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -1,0 +1,53 @@
+curl 'https://query2.finance.yahoo.com/v10/finance/quoteSummary/ES=F?formatted=true&crumb=sxCZygzUaUK&lang=en-US&region=US&modules=price%2CsummaryDetail&corsDomain=finance.yahoo.com' -H 'pragma: no-cache' -H 'origin: https://finance.yahoo.com' -H 'accept-encoding: gzip, deflate, sdch, br' -H 'accept-language: en-US,en;q=0.8,he;q=0.6' -H 'user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36' -H 'accept: */*' -H 'cache-control: no-cache' -H 'authority: query2.finance.yahoo.com' -H 'cookie: B=1jmfastbret12&b=3&s=89; PRF=t%3DXIV%252BMSFT%252B0700.HK' -H 'referer: https://finance.yahoo.com/quote/XIV?p=XIV' --compressed
+
+GENERAL
+
+Request URL:https://query2.finance.yahoo.com/v10/finance/quoteSummary/ES=F?formatted=true&crumb=sxCZygzUaUK&lang=en-US&region=US&modules=price%2CsummaryDetail&corsDomain=finance.yahoo.com
+Request Method:GET
+Status Code:200 
+Remote Address:87.248.116.12:443
+Referrer Policy:no-referrer-when-downgrade
+
+RESPONSE HEADERS
+
+access-control-allow-credentials:true
+access-control-allow-origin:https://finance.yahoo.com
+age:1
+cache-control:max-age=1, stale-while-revalidate=15
+content-encoding:gzip
+content-length:891
+content-type:application/json; charset=utf-8
+date:Thu, 18 May 2017 08:30:38 GMT
+server:ATS
+status:200
+strict-transport-security:max-age=0
+vary:Origin
+via:http/1.1 media-ncache-api15.prod.media.ir2.yahoo.com (ApacheTrafficServer [cMsSfW]), http/1.1 media-ncache-api16.prod.media.ir2.yahoo.com (ApacheTrafficServer [cMsSf ]), http/1.1 media-router-api4.prod.media.ir2.yahoo.com (ApacheTrafficServer [cMsSfW]), https/1.1 e12.ycpi.amb.yahoo.com (ApacheTrafficServer [cMsSfW])
+x-content-type-options:nosniff
+x-yahoo-request-id:cf4gfslchqmte
+x-yql-host:pprd3-node7519-lh2.manhattan.ir2.yahoo.com
+
+REQUEST HEADERS
+
+:authority:query2.finance.yahoo.com
+:method:GET
+:path:/v10/finance/quoteSummary/ES=F?formatted=true&crumb=sxCZygzUaUK&lang=en-US&region=US&modules=price%2CsummaryDetail&corsDomain=finance.yahoo.com
+:scheme:https
+accept:*/*
+accept-encoding:gzip, deflate, sdch, br
+accept-language:en-US,en;q=0.8,he;q=0.6
+cache-control:no-cache
+cookie:B=1jmfastbret12&b=3&s=89; PRF=t%3DXIV%252BMSFT%252B0700.HK
+origin:https://finance.yahoo.com
+pragma:no-cache
+referer:https://finance.yahoo.com/quote/XIV?p=XIV
+user-agent:Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36
+
+QUERY STRING PARAMETERS
+
+formatted:true
+crumb:sxCZygzUaUK
+lang:en-US
+region:US
+modules:price,summaryDetail
+corsDomain:finance.yahoo.com

@@ -52,7 +52,9 @@
     "grunt-contrib-watch": "1.0.0",
     "load-grunt-tasks": "3.5.2",
     "mocha": "^3.4.1",
-    "proxyquire": "^1.8.0"
+    "proxyquire": "^1.8.0",
+    "sinon": "^2.3.1",
+    "sinon-chai": "^2.10.0"
   },
   "scripts": {
     "prepublish": "npm prune",

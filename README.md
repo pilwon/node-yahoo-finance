@@ -190,13 +190,15 @@ yahooFinance.quote({
 
   See the [contributors](https://github.com/pilwon/node-yahoo-finance/graphs/contributors).
 
+* Special thanks to [@gadicc](https://github.com/gadicc) who brought the broken library back to life when Yahoo suddently changed their API.
+
 
 ## License
 
 <pre>
 The MIT License (MIT)
 
-Copyright (c) 2013-2016 Pilwon Huh
+Copyright (c) 2013-2017 Pilwon Huh
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

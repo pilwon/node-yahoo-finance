@@ -1,4 +1,4 @@
-## PLEASE READ: This library is currently broken due to sudden API change by Yahoo Finance. The fantastic [@gadicc](https://github.com/gadicc) is currently working on a fix to support the new API. Please follow [PR #41](https://github.com/pilwon/node-yahoo-finance/pull/41) for the progress.
+## PLEASE READ: This library is partially broken due to sudden API change by Yahoo Finance. The fantastic [@gadicc](https://github.com/gadicc) is currently working on a fix to support the new API. Please follow [PR #41](https://github.com/pilwon/node-yahoo-finance/pull/41) for the progress.
 
 # yahoo-finance
 

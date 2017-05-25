@@ -9,13 +9,13 @@ import path from 'path';
 
 import chai from 'chai';
 import chaiAsPromised from 'chai-as-promised';
-import proxyquire from 'proxyquire';
 
 import moment from 'moment';
 
-import { assertValidHistoricalResult, assertValidSnapshotResult } from '../lib/index.spec.js';
+import { assertValidHistoricalResult } from '../lib/historical.spec.js';
+import { assertValidSnapshotResult } from '../lib/snapshot.spec.js';
 
-import { historical } from '../lib/index';
+import historical from '../lib/historical';
 
 const should = chai.should();
 chai.use(chaiAsPromised);

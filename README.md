@@ -1,4 +1,4 @@
-## PLEASE READ: This library is partially broken due to sudden API change by Yahoo Finance. The fantastic [@gadicc](https://github.com/gadicc) is currently working on a fix to support the new API. Please follow [PR #41](https://github.com/pilwon/node-yahoo-finance/pull/41) for the progress.
+## PLEASE READ: This library is partially broken due to sudden API change by Yahoo Finance. The fantastic [@gadicc](https://github.com/gadicc) is currently working on a fix to support the new API. Please follow [PR #42](https://github.com/pilwon/node-yahoo-finance/pull/42) for the progress.
 
 # yahoo-finance
 
@@ -190,7 +190,7 @@ yahooFinance.quote({
 
   See the [contributors](https://github.com/pilwon/node-yahoo-finance/graphs/contributors).
 
-* Special thanks to [@gadicc](https://github.com/gadicc) who brought the broken library back to life when Yahoo suddently changed their API. (check out his hero work at [PR #37](https://github.com/pilwon/node-yahoo-finance/pull/37) and [PR #41](https://github.com/pilwon/node-yahoo-finance/pull/41))
+* Special thanks to [@gadicc](https://github.com/gadicc) who brought the broken library back to life when Yahoo suddently changed their API. (check out his hero work at PR [#37](https://github.com/pilwon/node-yahoo-finance/pull/37), [#41](https://github.com/pilwon/node-yahoo-finance/pull/41), and [#42](https://github.com/pilwon/node-yahoo-finance/pull/42))
 
 
 ## License

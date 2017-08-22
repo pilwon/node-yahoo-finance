@@ -294,7 +294,7 @@ const result = await quote('TSLA', ['summaryDetail', 'recommendationTrend']);
 }
 ```
 
-**defaultKeyStatics**
+**defaultKeyStatistics**
 
 ```js
 {

@@ -1,7 +1,7 @@
 {
   "name": "yahoo-finance",
   "description": "Yahoo Finance historical quotes and snapshot data downloader written in Node.js",
-  "version": "0.2.16",
+  "version": "0.3.3",
   "license": "MIT",
   "author": {
     "name": "Pilwon Huh",
@@ -38,14 +38,27 @@
     "tough-cookie": "^2.3.2"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.5.0",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
     "colors": "1.1.2",
+    "coveralls": "^2.13.1",
     "grunt": "1.0.1",
     "grunt-concurrent": "2.3.1",
     "grunt-contrib-jshint": "^1.1.0",
     "grunt-contrib-watch": "1.0.0",
-    "load-grunt-tasks": "3.5.2"
+    "load-grunt-tasks": "3.5.2",
+    "mocha": "^3.4.1",
+    "proxyquire": "^1.8.0",
+    "sinon": "^2.3.1",
+    "sinon-chai": "^2.10.0"
   },
   "scripts": {
-    "prepublish": "npm prune"
+    "prepublish": "npm prune",
+    "test": "mocha --require babel-polyfill --compilers js:babel-core/register \"lib/**/*.spec.js\" tests",
+    "coverage": "istanbul cover _mocha --require babel-polyfill --compilers js:babel-core/register \"lib/**/*.spec.js\" tests -R spec"
   }
 }

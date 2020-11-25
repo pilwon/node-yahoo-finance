@@ -1,5 +1,3 @@
-## PLEASE READ: This library is partially broken due to sudden API change by Yahoo Finance. The fantastic [@gadicc](https://github.com/gadicc) is currently working on a fix to support the new API. Please follow [PR #42](https://github.com/pilwon/node-yahoo-finance/pull/42) for the progress.
-
 # yahoo-finance
 
 `yahoo-finance` is [Yahoo Finance](http://finance.yahoo.com/) historical quotes and snapshot data downloader written in [Node.js](http://nodejs.org/).
@@ -11,7 +9,13 @@ Also check out [google-finance](https://github.com/pilwon/node-google-finance).
 
 ## Important: New Yahoo API
 
-Yahoo completely replaced their API on 2017-05-16.  This interim release is intended to get you up and running again quickly, but we're still working on it.  Note also that Yahoo stopped supporting their API for developers some time ago, so no guarantees can be made about service availability, but probably this package will keep working thanks to the magic of open-source.  Regarding the package API:
+This project is compatible with Yahoo's "new" (and internal) API from
+2017-05-16.  Please be aware that Yahoo stopped supporting their API for
+developers many years ago, so in theory this could stop working at any time
+and without prior notice.  In practice, however, the magic of open-source has
+kept this project working reliably and continuously for years and years.
+
+Regarding the package API:
 
 * `historical()` - should work as expected - please check the output and report any inconsistencies.
 

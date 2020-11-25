@@ -23,6 +23,9 @@ Regarding the package API:
 
 * `quote()` - NEW API more faithful to Yahoo's new API.  See below.  This replaces `snapshot()` and we suggest you use it instead.
 
+* Note: your very first request will take a bit longer to return, as we need to
+first send an additional request to Yahoo to get a "crumb" that is used for
+all future quests.
 
 ## Installation
 

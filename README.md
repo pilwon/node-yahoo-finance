@@ -6,8 +6,23 @@ The library handles fetching, parsing, and cleaning of CSV data and returns JSON
 
 Also check out [google-finance](https://github.com/pilwon/node-google-finance).
 
+## NB: v1 is feature frozen, v2 in beta
 
-## Important: New Yahoo API
+Please note that v1 is feature frozen.  It has been stable for years, and we
+are no longer working on it (besides for any urgent security fixes).  We have
+a v2 candidate in beta at https://github.com/gadicc/node-yahoo-finance2.
+
+* If you're just starting off, or are feeling adventurous, check out the v2 beta, which has a new API.
+
+* If you're an existing user, keep with the current stable version, and
+  await official upgrade instructions.  We anticipate a v2 stable release
+  around July 2021.
+
+Please submit feature requests only to https://github.com/gadicc/node-yahoo-finance2.
+
+*The rest of this README refers to v1 only.*
+
+## Yahoo's 2017 API Change
 
 This project is compatible with Yahoo's "new" (and internal) API from
 2017-05-16.  Please be aware that Yahoo stopped supporting their API for

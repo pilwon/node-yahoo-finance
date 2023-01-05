@@ -1,7 +1,7 @@
 {
   "name": "yahoo-finance",
   "description": "Yahoo Finance historical quotes and snapshot data downloader written in Node.js",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "license": "MIT",
   "author": {
     "name": "Pilwon Huh",
